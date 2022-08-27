@@ -1,0 +1,111 @@
+@import 'variables';
+
+body{
+    background: linear-gradient(to right,$right ,$left);
+}
+header{
+    margin-left: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    h1{
+        color: $font-color;
+    }
+    .logo {
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.land{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h1 {
+        text-align: center;
+        color: $font-color;
+        font-size: 50px;
+    }
+    h2{
+        color: $font-color;
+        text-align: center;
+    }
+    h4 {
+        color: $error;
+        text-align: center;
+    }
+}
+.search-form{
+    text-align: center;
+    &__input{
+        width: 60%;
+        height: 2.5em;
+    }
+    &__button{
+        width: 5em;
+        height: 2.5em;
+        border: #F0F8FF;
+        color: $left;
+        background: linear-gradient(to right,
+                    $right,
+                    $font-color);
+    }
+}
+.card{
+
+    background: linear-gradient(to bottom right,
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0.05));
+        box-shadow: 0 1rem 2rem rgba(240, 248, 255, 0.5), -1px -1px 2px #F0F8FF,
+            1px 1px 2px $font-color;
+        backdrop-filter: blur(0.8rem);
+        padding: 1.5rem;
+        border-radius: 1rem;
+    display: none;
+    margin-inline: 20%;
+    padding-block: 10px;
+    padding-inline: 4%;
+    &__img{
+        flex-basis: 35%;
+        padding-block: 40px;
+        margin-right: 50px;
+        
+        img{
+            background: linear-gradient(to bottom right,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(255, 255, 255, 0.05));
+            box-shadow: 0 1rem 2rem rgba(240, 248, 255, 0.5), -1px -1px 2px #F0F8FF,
+                    1px 1px 2px $font-color;
+            backdrop-filter: blur(0.8rem);
+            width: 100%;
+        }
+    }
+    &__content{
+        padding-block: 40px ;
+        display: grid;
+        gap: .2rem 1rem;
+        grid-template-columns: 1fr 0 1fr;
+        color: $font-color;
+        flex-basis: 65%;
+        img {
+            margin: auto auto;
+            width: 40px;
+            height: 40px;
+        }
+        h3{
+            margin: 2px 0 5px 0;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.grid-span-2-col{
+    grid-column: span 2;
+}
+.grid-span-3-col {
+    grid-column: span 3;
+}

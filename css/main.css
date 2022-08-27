@@ -1,0 +1,105 @@
+body {
+  background: linear-gradient(to right, #05275c, #042964);
+}
+
+header {
+  margin-left: 15px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  color: #F0F8FF;
+}
+header .logo {
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.land {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.land h1 {
+  text-align: center;
+  color: #F0F8FF;
+  font-size: 50px;
+}
+.land h2 {
+  color: #F0F8FF;
+  text-align: center;
+}
+.land h4 {
+  color: #cf3333;
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+}
+.search-form__input {
+  width: 60%;
+  height: 2.5em;
+}
+.search-form__button {
+  width: 5em;
+  height: 2.5em;
+  border: #F0F8FF;
+  color: #042964;
+  background: linear-gradient(to right, #05275c, #F0F8FF);
+}
+
+.card {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 1rem 2rem rgba(240, 248, 255, 0.5), -1px -1px 2px #F0F8FF, 1px 1px 2px #F0F8FF;
+  -webkit-backdrop-filter: blur(0.8rem);
+          backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: none;
+  margin-inline: 20%;
+  padding-block: 10px;
+  padding-inline: 4%;
+}
+.card__img {
+  flex-basis: 35%;
+  padding-block: 40px;
+  margin-right: 50px;
+}
+.card__img img {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 1rem 2rem rgba(240, 248, 255, 0.5), -1px -1px 2px #F0F8FF, 1px 1px 2px #F0F8FF;
+  -webkit-backdrop-filter: blur(0.8rem);
+          backdrop-filter: blur(0.8rem);
+  width: 100%;
+}
+.card__content {
+  padding-block: 40px;
+  display: grid;
+  gap: 0.2rem 1rem;
+  grid-template-columns: 1fr 0 1fr;
+  color: #F0F8FF;
+  flex-basis: 65%;
+}
+.card__content img {
+  margin: auto auto;
+  width: 40px;
+  height: 40px;
+}
+.card__content h3 {
+  margin: 2px 0 5px 0;
+}
+.card__content p {
+  margin: 0;
+}
+
+.grid-span-2-col {
+  grid-column: span 2;
+}
+
+.grid-span-3-col {
+  grid-column: span 3;
+}/*# sourceMappingURL=main.css.map */

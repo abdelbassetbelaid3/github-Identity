@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/img/github.png" alt="logo" class="logo">
+        <h1>Identity</h1>
+    </header>
+    <main>
+        <div class="land">
+            <h1>Your GitHub Profile in Card</h1>
+            <h2>View a CARD model of your GitHub profile.
+            Share it, print it, and more!</h2>
+            <div class="search-form">
+                <label for="search"></label>
+                <input type="search" name="search" id="search" class="search-form__input">
+                <button class="search-form__button" id="hit">Hit</button>
+            </div>
+            <h4 id="not-found"></h4>
+        </div>
+        <div class="card">
+            <div class="card__img">
+                <img src="" alt="" id="avatar">
+            </div>
+            <div class="card__content">
+                <img src="/img/github.png" alt="" class="grid-span-3-col">
+                <div class="element grid-span-3-col">
+                    <h3>Name:</h3>
+                    <p id="name"></p>
+                </div>
+                <div class="element grid-span-2-col">
+                    <h3>User-name:</h3>
+                    <p id="user-name"></p>
+                </div>
+                <div class="element">
+                    <h3>Company:</h3>
+                    <p id="company"></p>
+                </div>
+                <div class="element grid-span-2-col">
+                    <h3>Twitter:</h3>
+                    <a href="" id="twitter"></a>
+                </div>
+                <div class="element">
+                    <h3>location:</h3>
+                    <p id="location"></p>
+                </div>
+                <div class="element grid-span-3-col">
+                    <h3>Email:</h3>
+                    <p id="mail"></p>
+                </div>
+                <div class="element grid-span-3-col">
+                    <h3>Bio:</h3>
+                    <p id="bio"></p>
+                </div>
+            </div>
+        </div>
+        <div class="repo-data">
+
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
