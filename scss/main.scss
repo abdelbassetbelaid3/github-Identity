@@ -1,32 +1,54 @@
 @import 'variables';
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anek Telugu";
+}
 body{
     background: linear-gradient(to right,$right ,$left);
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    gap: 20px;
+    
 }
 header{
-    margin-left: 15px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    gap: 10px;
     h1{
         color: $font-color;
+        margin-top: 5px;
     }
     .logo {
-        margin-right: 15px;
         width: 50px;
         height: 50px;
+        
     }
 }
 
 .land{
+    margin-top: 40px;
     height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     h1 {
         text-align: center;
-        color: $font-color;
+        font-family: "Anek Telugu";
+        font-weight: 600;
         font-size: 50px;
+        background-image: linear-gradient(to right, #a4d4ff, #0575E6,#2c9cff,#bde0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        
+            background-size: 300%;
+            background-position: -100%;
+        
+            animation: animatedText 5s infinite alternate-reverse;
     }
     h2{
         color: $font-color;
@@ -38,23 +60,31 @@ header{
     }
 }
 .search-form{
+    display: grid;
+    gap: 10px;
     text-align: center;
-    &__input{
-        width: 60%;
-        height: 2.5em;
-    }
-    &__button{
-        width: 5em;
-        height: 2.5em;
-        border: #F0F8FF;
-        color: $left;
-        background: linear-gradient(to right,
-                    $right,
-                    $font-color);
-    }
+    &__search-bar{
+        &__input{
+            width: 60%;
+            height: 2.5em;
+        }
+        &__button{
+            width: 5em;
+            height: 2.5em;
+            border: #F0F8FF;
+            color: $left;
+            background-image: linear-gradient(to right, #a4d4ff, #bde0ff,#d7ecff,
+                #bde0ff,#a4d4ff);
+                                
+            background-size: 300%;
+            background-position: -100%;
+                                
+            animation: animatedText 5s infinite alternate-reverse;
+        }
+        }
 }
 .card{
-
+    margin-top: 30px;
     background: linear-gradient(to bottom right,
                 rgba(255, 255, 255, 0.2),
                 rgba(255, 255, 255, 0.05));
@@ -100,6 +130,9 @@ header{
         p{
             margin: 0;
         }
+        a{
+            color: $font-color;
+        }
     }
 }
 
@@ -108,4 +141,16 @@ header{
 }
 .grid-span-3-col {
     grid-column: span 3;
+}
+footer{
+    color: $font-color;
+    margin: 35px 20px 10px 20px;
+    a{
+        color: #2c9cff;
+    }
+}
+@keyframes animatedText {
+    to {
+        background-position: 100%;
+    }
 }

@@ -9,15 +9,15 @@ let company = document.getElementById("company")
 let loc = document.getElementById("location")
 let twitter = document.getElementById("twitter")
 let bio = document.getElementById("bio")
-console.log("aaaaaaa");
+let card = document.getElementsByClassName('card')[0]
+
 console.log(search.innerHTML)
 hit.onclick = function(){
     get_repo()
 };
 function get_repo() {
     if (search.value == ""){
-        console.log("no value")
-        not_found.innerText ='aaaa'
+        not_found.innerText ='Please Enter The User-name'
     }
     else{
         console.log(search.value)
@@ -25,9 +25,11 @@ function get_repo() {
             console.log(data)
             if (data["message"] === "Not Found"){
                 not_found.innerText = data["message"]
+                card.style.display = "none";
             }
             else{
                 not_found.innerText = ''
+                card.style.display = "flex";
                 upload_avatar(data["avatar_url"],data["name"],data["login"],data["company"],data["email"],data["twitter_username"],data["bio"],data["location"])
             }
         })
@@ -38,8 +40,12 @@ function upload_avatar(url,fl_name,usr_name,company_name,mail,twitter_id,descrip
     full_name.innerText = fl_name
     user_name.innerText = usr_name
     company.innerText = company_name
+    company.setAttribute('href','https://github.com/'+company_name.replace("@",""))
     email.innerText = mail
-    twitter.innerText = twitter_id
+    if (twitter_id != null){
+        twitter.innerText = "@"+twitter_id
+        twitter.setAttribute('href',"https://twitter.com/"+twitter_id)
+    }
     bio.innerText = description
     loc.innerText = locate
 }

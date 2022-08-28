@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/img/github.png" type="image/">
+    <title>GitHub Identity Card</title>
 </head>
 <body>
     <header>
@@ -15,12 +16,14 @@
     <main>
         <div class="land">
             <h1>Your GitHub Profile in Card</h1>
-            <h2>View a CARD model of your GitHub profile.
+            <h2>View a CARD model of your GitHub profile.<br>
             Share it, print it, and more!</h2>
             <div class="search-form">
-                <label for="search"></label>
-                <input type="search" name="search" id="search" class="search-form__input">
-                <button class="search-form__button" id="hit">Hit</button>
+                <div class="search-form__search-bar">
+                    <label for="search"></label>
+                    <input type="search" name="search" id="search" class="search-form__search-bar__input">
+                    <button class="search-form__search-bar__button" id="hit">Hit</button>
+                </div>
             </div>
             <h4 id="not-found"></h4>
         </div>
@@ -40,7 +43,7 @@
                 </div>
                 <div class="element">
                     <h3>Company:</h3>
-                    <p id="company"></p>
+                    <a href="" id="company"></a>
                 </div>
                 <div class="element grid-span-2-col">
                     <h3>Twitter:</h3>
@@ -60,11 +63,10 @@
                 </div>
             </div>
         </div>
-        <div class="repo-data">
-
-        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <h3>Made By <a href="https://github.com/abdelbassetbelaid3">@abdelbassetbelaid3</a></h3>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>

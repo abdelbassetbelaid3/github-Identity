@@ -1,23 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anek Telugu";
+}
+
 body {
   background: linear-gradient(to right, #05275c, #042964);
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  gap: 20px;
 }
 
 header {
-  margin-left: 15px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 50px 50px;
+  gap: 10px;
 }
 header h1 {
   color: #F0F8FF;
+  margin-top: 5px;
 }
 header .logo {
-  margin-right: 15px;
   width: 50px;
   height: 50px;
 }
 
 .land {
+  margin-top: 40px;
   height: 220px;
   display: flex;
   flex-direction: column;
@@ -25,8 +38,16 @@ header .logo {
 }
 .land h1 {
   text-align: center;
-  color: #F0F8FF;
+  font-family: "Anek Telugu";
+  font-weight: 600;
   font-size: 50px;
+  background-image: linear-gradient(to right, #a4d4ff, #0575E6, #2c9cff, #bde0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;
+  animation: animatedText 5s infinite alternate-reverse;
 }
 .land h2 {
   color: #F0F8FF;
@@ -38,21 +59,27 @@ header .logo {
 }
 
 .search-form {
+  display: grid;
+  gap: 10px;
   text-align: center;
 }
-.search-form__input {
+.search-form__search-bar__input {
   width: 60%;
   height: 2.5em;
 }
-.search-form__button {
+.search-form__search-bar__button {
   width: 5em;
   height: 2.5em;
   border: #F0F8FF;
   color: #042964;
-  background: linear-gradient(to right, #05275c, #F0F8FF);
+  background-image: linear-gradient(to right, #a4d4ff, #bde0ff, #d7ecff, #bde0ff, #a4d4ff);
+  background-size: 300%;
+  background-position: -100%;
+  animation: animatedText 5s infinite alternate-reverse;
 }
 
 .card {
+  margin-top: 30px;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
   box-shadow: 0 1rem 2rem rgba(240, 248, 255, 0.5), -1px -1px 2px #F0F8FF, 1px 1px 2px #F0F8FF;
   -webkit-backdrop-filter: blur(0.8rem);
@@ -95,6 +122,9 @@ header .logo {
 .card__content p {
   margin: 0;
 }
+.card__content a {
+  color: #F0F8FF;
+}
 
 .grid-span-2-col {
   grid-column: span 2;
@@ -102,4 +132,24 @@ header .logo {
 
 .grid-span-3-col {
   grid-column: span 3;
+}
+
+footer {
+  color: #F0F8FF;
+  margin: 35px 20px 10px 20px;
+}
+footer a {
+  color: #2c9cff;
+}
+
+@-webkit-keyframes animatedText {
+  to {
+    background-position: 100%;
+  }
+}
+
+@keyframes animatedText {
+  to {
+    background-position: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
