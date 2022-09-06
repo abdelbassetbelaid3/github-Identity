@@ -70,12 +70,9 @@ header .logo {
 .search-form__search-bar__button {
   width: 5em;
   height: 2.5em;
-  border: #F0F8FF;
   color: #042964;
-  background-image: linear-gradient(to right, #a4d4ff, #bde0ff, #d7ecff, #bde0ff, #a4d4ff);
-  background-size: 300%;
-  background-position: -100%;
-  animation: animatedText 5s infinite alternate-reverse;
+  background-color: #6ebbff;
+  border: 2px solid #6ebbff;
 }
 
 .card {

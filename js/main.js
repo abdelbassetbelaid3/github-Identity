@@ -37,15 +37,18 @@ function get_repo() {
 }
 function upload_avatar(url,fl_name,usr_name,company_name,mail,twitter_id,description,locate){
     avatar.setAttribute('src',url)
-    full_name.innerText = fl_name
-    user_name.innerText = usr_name
-    company.innerText = company_name
+    full_name.innerText = fl_name || '/'
+    user_name.innerText = usr_name || '/'
+    company.innerText = company_name || '/'
     company.setAttribute('href','https://github.com/'+company_name.replace("@",""))
-    email.innerText = mail
+    email.innerText = mail || '/'
     if (twitter_id != null){
         twitter.innerText = "@"+twitter_id
         twitter.setAttribute('href',"https://twitter.com/"+twitter_id)
     }
-    bio.innerText = description
-    loc.innerText = locate
+    else{
+        twitter.innerText ='/'
+    }
+    bio.innerText = description || "/"
+    loc.innerText = locate || "/"
 }
